@@ -1,0 +1,42 @@
+@use "../scss/utils" as u;
+
+.headerOption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--icons);
+	cursor: pointer;
+	transition: color 50ms ease-in-out;
+
+	&:hover {
+		color: var(--linkedin-blue);
+	}
+	&:hover > &__title {
+		// font-weight: 600;
+		text-decoration: underline;
+	}
+
+	&__icon {
+		object-fit: contain;
+		height: 1.5625rem;
+	}
+
+	&__avatar {
+		height: 1.5625rem;
+		width: 1.5625rem;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&__title {
+		word-wrap: break-word;
+		font-weight: 400;
+		font-size: 0.75rem;
+		letter-spacing: 0.2pt;
+		text-align: center;
+
+		@include u.breakpoint-down(mid-xsmall) {
+			display: none;
+		}
+	}
+}
