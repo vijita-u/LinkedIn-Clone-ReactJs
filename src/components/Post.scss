@@ -1,0 +1,104 @@
+@use "../scss/utils" as u;
+
+.post {
+	position: relative;
+	background-color: var(--white);
+	padding: 0.9375rem;
+	border-radius: 0.625rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+
+	@include u.breakpoint-down(medium) {
+		width: 98%;
+		margin-inline: auto;
+	}
+
+	&__delete {
+		position: absolute;
+		top: 0.625rem;
+		right: 1.25rem;
+		cursor: pointer;
+
+		.deleteIcon {
+			color: var(--black);
+
+			&:hover {
+				color: red;
+			}
+		}
+	}
+
+	&__avatar {
+		height: 3.125rem;
+		width: 3.125rem;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	&__header {
+		display: flex;
+		gap: 0.3125rem;
+	}
+
+	&__info {
+		small {
+			color: gray;
+		}
+	}
+
+	&__body {
+		overflow-wrap: anywhere;
+		font-size: 0.875rem;
+		padding-bottom: 1.25rem;
+		margin-bottom: -0.9375rem;
+		border-bottom: 1px solid var(--border-gray);
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+		@include u.breakpoint-up(mid-small) {
+			width: 80%;
+			margin-inline: auto;
+		}
+
+		@include u.breakpoint-up(medium) {
+			width: 100%;
+		}
+
+		@include u.breakpoint-up(medium) {
+			width: 80%;
+		}
+
+		@include u.breakpoint-up(large) {
+			width: 70%;
+		}
+	}
+
+	.inputOption {
+		&:hover {
+			background-color: var(--hover-color);
+			border-radius: 0.625rem;
+		}
+
+		&:hover h5 {
+			color: var(--linkedin-blue);
+		}
+
+		&:hover .inputOption__icon {
+			fill: var(--linkedin-blue);
+		}
+
+		h5 {
+			color: #686868;
+		}
+
+		&__icon {
+			color: darkgray;
+			height: 1.25rem;
+		}
+	}
+}

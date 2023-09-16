@@ -1,0 +1,123 @@
+@use "../scss/utils" as u;
+
+.register {
+	margin-top: -1.875rem;
+	display: grid;
+	place-items: center;
+	margin-inline: auto;
+	padding-block: 6.25rem;
+
+	img {
+		object-fit: contain;
+		height: 6.25rem;
+		margin-block: 1.25rem;
+		position: absolute;
+		top: -20px;
+		left: 1.25rem;
+	}
+
+	form {
+		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
+		width: 65%;
+		min-width: 15.625rem;
+		padding: 1.5rem;
+		border-radius: 0.3125rem;
+		margin-bottom: 1.875rem;
+
+		input {
+			height: 1.875rem;
+			width: 100%;
+			border: 1px solid #3a3a3a;
+			font-size: .875rem;
+			padding-left: 0.625rem;
+			margin-bottom: 0.625rem;
+			border-radius: 0.3125rem;
+			outline: none;
+		}
+
+		button {
+			height: 42px;
+			padding-inline: 1.5rem;
+			background-color: var(--linkedin-blue);
+			border: none;
+			border-radius: 3.125rem;
+			color: var(--white);
+			font-weight: 500;
+			font-size: 0.9375rem;
+			cursor: pointer;
+			transition: all 200ms ease-in-out;
+
+			&:hover {
+				background-color: #064a8e;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.25rem;
+
+		@include u.breakpoint-down(small) {
+			margin-top: 0.625rem;
+		}
+
+		h1 {
+			font-weight: 400;
+			letter-spacing: 0.2pt;
+			text-align: center;
+
+			@include u.breakpoint-down(small) {
+				font-size: 1.5rem;
+			}
+
+			@include u.breakpoint-down(mid-xsmall) {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	&__inputField {
+		h5 {
+			color: #3a3a3a;
+			font-weight: 500;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__terms {
+		margin-block: 0.625rem 0.9375rem;
+		font-size: 0.6875rem;
+		color: var(--icons);
+		text-align: center;
+
+		span {
+			color: var(--linkedin-blue);
+			font-weight: 600;
+			cursor: pointer;
+		}
+	}
+
+	&__signIn {
+		font-size: 0.9375rem;
+		margin: 1.875rem auto 0.3125rem;
+
+		@include u.breakpoint-down(small) {
+			font-size: 0.875rem;
+		}
+
+		span {
+			color: var(--linkedin-blue);
+			font-weight: 600;
+			padding: 0.3125rem 0.4375rem;
+			border-radius: 3.125rem;
+			cursor: pointer;
+			transition: all 200ms ease-in-out;
+
+			&:hover {
+				text-decoration: underline;
+				background-color: rgba(10, 102, 194, 0.2);
+			}
+		}
+	}
+}

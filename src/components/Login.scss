@@ -1,0 +1,88 @@
+.login {
+	background-color: var(--white);
+	width: 100%;
+	position: relative;
+	display: grid;
+	place-items: center;
+	margin-inline: auto;
+	padding-block: 6.25rem;
+
+	img {
+		object-fit: contain;
+		height: 6.25rem;
+		margin-block: 1.25rem;
+		position: absolute;
+		top: -20px;
+		left: 1.25rem;
+	}
+
+	form {
+		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
+        width: 30%;
+		min-width: 16.25rem;
+		padding: 1.5rem;
+		border-radius: 0.3125rem;
+		margin-bottom: 1.875rem;
+		box-shadow: 0 0 5px 2px rgb(225, 224, 224);
+
+		input {
+			height: 2.8125rem;
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			font-size: 1rem;
+			padding-left: 0.625rem;
+			margin-bottom: 1.25rem;
+			border-radius: 0.3125rem;
+			outline: none;
+
+			&::placeholder {
+				font-weight: 100;
+                letter-spacing: 0.5pt;
+			}
+		}
+
+		button {
+			height: 3.25rem;
+			padding-inline: 1.5rem;
+			background-color: var(--linkedin-blue);
+			border: none;
+			border-radius: 3.125rem;
+			color: var(--white);
+			font-weight: 500;
+			font-size: 1rem;
+			cursor: pointer;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.25rem;
+
+		h1 {
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 0.75rem;
+			letter-spacing: 0.4pt;
+		}
+	}
+
+	&__register {
+		font-size: 0.9375rem;
+
+		span {
+			color: var(--linkedin-blue);
+			font-weight: 600;
+            padding: .3125rem .4375rem;
+            border-radius: 3.125rem;
+			cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+			&:hover {
+				text-decoration: underline;
+                background-color: rgba(10, 102, 194, 0.2);
+			}
+		}
+	}
+}
