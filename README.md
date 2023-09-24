@@ -1,4 +1,4 @@
-# LinkedIn-Clone-ReactJs
+# LinkedIn Clone using ReactJs
 
 ![LinkedIn Mockup](https://github.com/vijita-u/LinkedIn-Clone-ReactJs/assets/96591032/582cdeb3-eba0-4fc2-8105-201ff7b9c80d)
 
